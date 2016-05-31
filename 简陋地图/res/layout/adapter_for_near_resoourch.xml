@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_for_adapterNear"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:text="方案11)你负责即时通讯的哪个模块？
+      2)服务端的架构是如何搭建的？都有什么功能？
+      3)客户端的即时通讯都有什么功能？
+      4)多长时间完成的及时通讯相关模块的开发？
+      5)技术难点有哪些？"
+            android:textColor="#6600ff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+   		android:id="@+id/llauout_near_btns"
+        android:layout_marginLeft="25dp">
+
+         <Button
+            android:id="@+id/btn_near_seeBitmap"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="0"
+            android:layout_weight="1"
+            android:text="查看地图" />
+        <Button
+            android:id="@+id/btn_near_sendToSMS"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="1"
+            android:layout_weight="1"
+            android:text="短信分享" />
+
+	  <Button
+	      android:id="@+id/btn_near_save"
+	      style="?android:attr/buttonStyleSmall"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:tag="2"
+	      android:text="保 存" />
+  	
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical" >
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="10sp"
+       android:text="1本人承接安卓中小项目，没有最低价，只有更低价！" />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="10sp"
+       android:text="2招老婆一名，求温柔贤惠型" />
+   <TextView
+       android:layout_marginLeft="40dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="15sp"
+       android:text="282566007@qq.com" />
+
+</LinearLayout>

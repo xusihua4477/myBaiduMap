@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_navigate_hideForMapRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出发地选项:" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupForChufadi"
+                android:layout_width="253dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".66"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rd_chufa_choose_dangqian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="当前位置作出发地"
+                    android:textSize="11sp" />
+
+                <RadioButton
+                    android:id="@+id/rd_chufa_choose_customer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="自己输入出发地"
+                    android:textSize="11sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出发地:" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_navigate_chufadi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:completionThreshold="1"
+                android:hint="请输入出发地" />
+
+            <Button
+                android:id="@+id/btn_nagigate_autoSearch"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:drawablePadding="0dp"
+                android:text="自动检测"
+                android:textSize="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvForChufadiAdapter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:text="目的城市:"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_navigate_midi_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="目的地" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autotv_navigate_mudi_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                   android:hint="请输入目的地" 
+                android:dropDownHorizontalOffset="-20dp" />
+
+            <Button
+                android:id="@+id/btn_nagigate_search"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:background="@drawable/search"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvForMudididiAdapter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="出行方式:" />
+
+            <RadioGroup
+                android:layout_width="253dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".66"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_button_bytakeBUS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="坐公交"
+                    android:textSize="11sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_bytakeTaxi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="做出租或驾车"
+                    android:textSize="11sp"
+                    />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_navigate_re_resourch"
+                android:layout_width="57dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:onClick="btn_navigate_re_resourch"
+                android:padding="0.5dp"
+                android:text="重新搜索"
+                android:textSize="10dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_nagigate_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="tv_nagigate_show"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lvForApaterBusPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/lLayoutForNivigate_baiduMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView_nagigate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_navigate_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回" />
+    </LinearLayout>
+
+</LinearLayout>

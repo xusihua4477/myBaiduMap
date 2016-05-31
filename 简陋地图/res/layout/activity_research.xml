@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_resourch_research"
+                android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_home_search_shape"
+            android:drawableLeft="@drawable/ic_home_search"
+            android:drawablePadding="5dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="14dp"
+            android:paddingTop="2dp"
+            android:hint="输入搜索内容.. "
+             />
+
+        <Button
+            style="@style/Smile.Button.theme"
+            android:id="@+id/btn_research_research"
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:text="周边搜索" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_resourch_forshowMap"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView_resourchFragment_resourch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <com.example.myprogram_baidumap.view.Advertisement
+            android:id="@+id/adv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15" />
+
+        
+        
+        
+        
+        
+        <Button
+            android:id="@+id/btn_research_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:text="返回"
+            android:textSize="9sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+<include
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    layout="@layout/item_search" />
+
+</LinearLayout>

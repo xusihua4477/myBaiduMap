@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/menu_unselect"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@color/menu_selected"
+            android:drawableTop="@drawable/find_pressed"
+            android:gravity="center"
+            android:tag="0"
+            android:text="路线导航" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/find_pressed"
+            android:gravity="center"
+            android:maxEms="4"
+            android:tag="1"
+            android:text="公交地铁查询" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/find_pressed"
+            android:gravity="center"
+            android:tag="2"
+            android:text="搜索" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/find_pressed"
+            android:gravity="center"
+            android:tag="3"
+            android:text="收藏夹" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_llayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

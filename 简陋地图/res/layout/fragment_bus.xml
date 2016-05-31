@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="城市:"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/et_search_City"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_margin="3dp"
+            android:layout_weight="0.5"
+               android:layout_gravity="center_vertical"
+            android:background="@drawable/button_normal_shape"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColorHint="#b3b3b3"
+            android:textSize="12sp" />
+
+        <TextView
+             style="@style/textview"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+           android:layout_gravity="center_vertical"
+            android:maxLines="3"
+            android:ems="3"
+            android:text="公交或地铁名称:"
+            android:textSize="10sp" />
+
+        <!--
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:completionThreshold="1"
+            android:dropDownHorizontalOffset="-35dp"
+            android:text="4haox"
+            android:textSize="12sp"
+        -->
+
+        <AutoCompleteTextView
+            android:id="@+id/autotv_search_bus"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/button_normal_shape"
+               android:layout_gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColorHint="#b3b3b3"
+            android:textSize="14sp" />
+
+        <Button
+            style="@style/button"
+            android:id="@+id/btn_search_bus_save"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="3dp"
+            android:text="收藏"
+            android:textColor="#7D26CD"
+          
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvForBusChoosenForBusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+    </ListView>
+
+ <!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".66"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_button_listForbus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="列表显示各站点"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_mapForbus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="地图显示各站点"
+                android:textSize="11sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_search_bus_save"
+            style="@style/button"
+            android:layout_width="57dp"
+            android:layout_height="match_parent"
+            android:text="收藏"
+            android:gravity="center"
+            android:padding="0.5dp"
+          android:textColor="#7D26CD"
+            android:textSize="10dp" />
+    </LinearLayout> -->
+
+    <LinearLayout
+        android:id="@+id/ll_busInfoList_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_bus_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6600ff" />
+
+        <TextView
+            android:id="@+id/tv_bus_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:checked="false"
+            android:textColor="#66cc00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_busInfoList_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/listViewForBusStations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/tv_bus_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:ems="1"
+            android:text=""
+            android:textColor="#ff3333" />
+    </LinearLayout>
+
+</LinearLayout>
